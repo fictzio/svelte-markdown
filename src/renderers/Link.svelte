@@ -10,8 +10,8 @@
 
   let isMacro = function(txt) {
 		 if (macros.some(v => txt.includes(v))) {
-        params = val.substring(val.indexOf(' '), val.length).trim()
-			  macro = val.substring(0, val.indexOf(' ')).trim()
+        params = txt.substring(txt.indexOf(' '), txt.length).trim()
+			  macro = txt.substring(0, txt.indexOf(' ')).trim()
       return true
     } else {
 			return false
