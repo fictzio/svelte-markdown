@@ -5,9 +5,8 @@
     
     let params = getMacroParams(text)
     let macro = getMacroType(text)
-
-    console.log()
 </script>
 
-{macro} / {params}
+<p>Macro: {macro} </p>
+<p>Params: {params}</p>
 <svelte:component this={defaultMacros[macro]} {params} {...$$restProps}></svelte:component>
