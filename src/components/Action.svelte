@@ -5,9 +5,8 @@
     
     let params = getMacroParams(text)
     let macro = getMacroType(text)
+
+    let component = macroComponents[macro]
 </script>
 
-<p>Macro: {macro} </p>
-<p>Params: {params}</p>
-
-<svelte:component this={macroComponents[macro]} {...$$restProps}></svelte:component>
+<svelte:component this={component} {...$$restProps}></svelte:component>
