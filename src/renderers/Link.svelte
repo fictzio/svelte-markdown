@@ -6,7 +6,7 @@
   
   let params = undefined
   let macro = undefined
-  let macros = ['roll','add','tell','go','open']
+  let macros = ['/roll ','/add ','/tell ','/go ','/open ']
 
   let isMacro = function(txt) {
 		 if (macros.some(v => txt.includes(v))) {
