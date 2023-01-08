@@ -9,4 +9,5 @@
     console.log()
 </script>
 
+{macro} / {params}
 <svelte:component this={defaultMacros[macro]} {params} {...$$restProps}></svelte:component>
