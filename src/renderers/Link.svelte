@@ -1,17 +1,17 @@
 <script lang="ts">
   import Action from "../components/Action.svelte";
 
-  export let href:string|undefined
+  export let href:string|undefined = ''
   export let title:string|undefined = undefined
   
   let params:string = ''
   let macro:string = ''
   let macros = ['roll ','add ','tell ','go ','open ']
 
-  let isMacro = function(txt:string) {
+  let isMacro = function(txt:string):boolean {
 		if (macros.some(v => txt.includes(v))) {
-        params = txt.substring(txt.indexOf(' '), txt.length).trim()
-			  macro = txt.substring(0, txt.indexOf(' ')).trim()
+        params = href.substring(href.indexOf(' '), href.length).trim()
+			  macro = href.substring(0, href.indexOf(' ')).trim()
         return true
     } else {
 			return false
