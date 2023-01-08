@@ -1,5 +1,4 @@
 <script>
-    import { isAsyncFunction } from "util/types"
   import Action from "../components/Action.svelte";
 
   export let href = ''
