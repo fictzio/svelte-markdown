@@ -5,19 +5,23 @@
   export let title = undefined
   
   let params = undefined
+  let macro = undefined
+  let macros = ['roll','add','tell','go','open']
 
-  function isAction(txt) {
-    let macros = ['/roll','/add','/tell','/go','/open']
-    let isMacro = macros.some(macro => txt.includes(macro));
-    
-    params = txt.substring(txt.indexOf(' ') , txt.length)
-    return isMacro
-  }
+  let isMacro = function(txt) {
+		 if (macros.some(v => txt.includes(v))) {
+        params = val.substring(val.indexOf(' '), val.length).trim()
+			  macro = val.substring(0, val.indexOf(' ')).trim()
+      return true
+    } else {
+			return false
+		}
+	 }
 
 </script>
 
-{#if isAction(href)}
-<Action {href} {title} {params}><slot></slot></Action>
+{#if isMacro(href)}
+  <Action {title} {params} {macro}><slot></slot></Action>
 {:else}
-<a {href} {title}><slot></slot></a>
+  <a {href} {title}><slot></slot></a>
 {/if}
