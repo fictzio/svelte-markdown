@@ -16,12 +16,10 @@ export const defaultMacros = {
 }
 
 const hasSubstring =  function(str:string, arr:Array<string>):string {
-	arr.some(element => {
-		if (str.includes(element)) {
-			console.log(element)
-			return element;
-		};
-	})
+	arr.find(element => {
+		return str.includes(element);
+	});
+
 	return ''
 }
 
@@ -40,7 +38,8 @@ export const isMacro = function(txt:string):boolean {
  * @returns 
  */
 export const getMacroParams = function(txt:string):string {
-	let strMacro = getMacroType(txt)
+	let strMacro = '/' + getMacroType(txt) + ' '
+	console.log('getParams:' + strMacro)
 	let ret = txt.substring(txt.indexOf(strMacro) + strMacro.length, txt.indexOf(']'))
 	return ret
 }
