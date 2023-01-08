@@ -1,22 +1,15 @@
 <script lang="ts">
-  import Action from "../components/Action.svelte";
+  import Action from "../components/Action.svelte"
+  import { isMacro } from '../scripts/rpg-markdown'
 
   export let href:string|undefined = ''
   export let title:string|undefined = undefined
   
   let params:string = ''
   let macro:string = ''
-  let macros = ['roll ','add ','tell ','go ','open ']
 
-  let isMacro = function(txt:string):boolean {
-		if (macros.some(v => txt.includes(v))) {
-        params = href.substring(href.indexOf(' '), href.length).trim()
-			  macro = href.substring(0, href.indexOf(' ')).trim()
-        return true
-    } else {
-			return false
-		}
-	 }
+  params = href.substring(href.indexOf(' '), href.length).trim()
+	macro = href.substring(0, href.indexOf(' ')).trim()
 </script>
 
 {#if isMacro(href)}
