@@ -10,7 +10,7 @@
     let macros = ['/roll','/add','/tell','/go','/open']
     let isMacro = macros.some(macro => txt.includes(macro));
     
-    params = txt.substring(txt.firstIndexOf(' ') , txt.length)
+    params = txt.substring(txt.indexOf(' ') , txt.length)
     return isMacro
   }
 
