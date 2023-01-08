@@ -9,8 +9,8 @@ import SetValue__SvelteComponent_ from './SetValue.svelte'
 import Goto__SvelteComponent_ from './Goto.svelte'
 
 export const macroComponents = {
-    roll: Roll__SvelteComponent_,
-    random: Random__SvelteComponent_,
-    set: SetValue__SvelteComponent_,
-    goto: Goto__SvelteComponent_
+    "roll": Roll__SvelteComponent_,
+    "random": Random__SvelteComponent_,
+    "set": SetValue__SvelteComponent_,
+    "goto": Goto__SvelteComponent_
 }
