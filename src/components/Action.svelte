@@ -2,7 +2,7 @@
     export let href = ''
     export let title = undefined
     export let params = undefined
-    let macro = href.substring(0, href.firstIndexOf(' '))
+    let macro = href.substring(0, href.indexOf(' '))
 
     function runAction() {
         console.log('Run macro: ' + macro)
