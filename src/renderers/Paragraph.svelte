@@ -11,9 +11,9 @@
 </script>
 
 {#if hasComponent}
-<Dummy />
+<Dummy {text} />
 {:else if hasMacro}
-<Action />
+<Action {text} />
 {:else}
 <p><slot></slot></p>
 {/if}
