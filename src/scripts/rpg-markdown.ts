@@ -16,11 +16,11 @@ export const defaultMacros = {
 }
 
 const hasSubstring =  function(str:string, arr:Array<string>):string {
-	arr.find(element => {
+	let ret = arr.find(element => {
 		return str.includes(element);
 	});
 
-	return ''
+	return ret
 }
 
 
