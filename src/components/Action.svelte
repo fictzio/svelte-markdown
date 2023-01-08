@@ -9,4 +9,5 @@
 
 <p>Macro: {macro} </p>
 <p>Params: {params}</p>
-<svelte:component this={defaultMacros[macro]} {params} {...$$restProps}></svelte:component>
+
+<svelte:component this={defaultMacros[macro]} {...$$restProps}></svelte:component>

@@ -39,8 +39,7 @@ export const isMacro = function(txt:string):boolean {
  */
 export const getMacroParams = function(txt:string):string {
 	let strMacro = '/' + getMacroType(txt) + ' '
-	console.log('getParams:' + strMacro)
-	let ret = txt.substring(txt.indexOf(strMacro) + strMacro.length, txt.indexOf(')'))
+	let ret = txt.substring(txt.indexOf('(') + strMacro.length, txt.indexOf(')'))
 	return ret
 }
 
