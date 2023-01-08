@@ -1,4 +1,4 @@
-export const macros = ['/roll ','/random ','/set ','/goto ']
+export const macros = ['roll ','random ','set ','goto ']
 export const components = ['Component']
 
 import {
