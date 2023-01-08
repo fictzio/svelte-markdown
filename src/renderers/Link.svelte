@@ -6,9 +6,8 @@
   export let title = undefined
 
   function isAction(txt) {
-    let macros = []
-    console.log(txt)
-    return false
+    let macros = ['roll','add']
+    return macros.includes(txt)
   }
 
 </script>

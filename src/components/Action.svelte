@@ -3,7 +3,7 @@
     export let title = undefined
 
     function runAction() {
-        console.log(href)
+        console.log('Action: ' + href)
     }
 </script>
 
