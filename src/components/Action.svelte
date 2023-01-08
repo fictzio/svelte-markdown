@@ -7,6 +7,7 @@
     let macro = getMacroType(text)
 
     let component = macroComponents[macro]
+    console.log(component)
 </script>
 
 <svelte:component this={component} {...$$restProps}></svelte:component>
