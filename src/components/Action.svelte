@@ -1,15 +1,12 @@
-<script>
-    export let title = undefined
-    export let params = undefined
-    export let macro = undefined
+<script lang="ts">
+    import { getMacroType, getMacroParams } from "../scripts/rpg-markdown";
+    import { defaultMacros } from '../scripts/rpg-markdown'
     export let text = undefined
+    
+    let params = getMacroParams(text)
+    let macro = getMacroType(text)
 
-    function runAction() {
-        console.log('Run macro: ' + macro)
-        console.log('Params: ' + params)
-    }
-
-    console.log(text)    
+    console.log()
 </script>
 
-<button on:click={runAction} {title}><slot></slot> ({macro})</button>
+<svelte:component this={defaultMacros[macro]} {params} {...$$restProps}></svelte:component>
