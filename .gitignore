@@ -4,3 +4,7 @@
 .DS_Store
 .tern-port
 dist/
+package-lock.json
+yarn.lock
+yarn.lock
+*.lock
