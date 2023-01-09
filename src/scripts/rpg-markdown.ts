@@ -44,7 +44,7 @@ export const getMacroParams = function(txt:string):string {
 }
 
 export const getMacroType = function(txt:string):string {
-	return hasSubstring(txt, macros)
+	return hasSubstring(txt, macros).trim()
 }
 
 export const isComponent = function(txt:string):boolean {   
