@@ -1,6 +1,5 @@
 <script lang="ts">
     import { getMacroType, getMacroParams } from "../scripts/rpg-markdown";
-    import { macroComponents } from "./macros";
     import { defaultMacros } from "../scripts/rpg-markdown";
     export let text = undefined
     
