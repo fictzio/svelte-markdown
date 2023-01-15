@@ -1,17 +1,17 @@
 <script lang="ts">
-    import Dummy from '../components/Dummy.svelte'
+    import Field from '../components/Field.svelte'
     import Action from "../components/Action.svelte"
     export let text:string
 
-    import { isMacro } from '../scripts/rpg-markdown'
-    import { isComponent } from '../scripts/rpg-markdown'
+    import { isMacro } from '../scripts/rpgmd'
+    import { isComponent } from '../scripts/rpgmd'
 
     $:hasComponent = isComponent(text)
     $:hasMacro = isMacro(text)
 </script>
 
 {#if hasComponent}
-<Dummy {text} />
+<Field {text} />
 {:else if hasMacro}
 <Action {text} />
 {:else}

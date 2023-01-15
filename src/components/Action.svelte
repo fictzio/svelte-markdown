@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { getMacroType, getMacroParams } from "../scripts/rpg-markdown";
-    import { defaultMacros } from "../scripts/rpg-markdown";
+    import { getMacroType, getMacroParams } from "../scripts/rpgmd";
+    import { defaultMacros } from "../scripts/rpgmd";
     export let text = undefined
     
     let params = getMacroParams(text)
