@@ -1,6 +1,6 @@
 <script lang="ts">
   import Action from "../components/Action.svelte"
-  import { isMacro } from '../scripts/rpgmd'
+  import { isMacro } from "../components/macros";
 
   export let href:string|undefined = ''
   export let title:string|undefined = undefined

@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { getMacroType, getMacroParams } from "../scripts/rpgmd";
-    import { defaultMacros } from "../scripts/rpgmd";
+    import { defaultMacros, getMacroType, getMacroParams } from "./macros";
+
     export let text = undefined
     
     let params = getMacroParams(text)
@@ -11,4 +11,4 @@
     let component = defaultMacros[macro]
 </script>
 
-<svelte:component this={component} {...$$restProps}></svelte:component>
+<svelte:component this={component} params={params} macro={macro} {...$$restProps}></svelte:component>

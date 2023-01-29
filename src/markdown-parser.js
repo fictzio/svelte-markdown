@@ -22,6 +22,7 @@ import {
   Blockquote,
   Code,
   Br,
+  Section
 } from './renderers'
 
 export const defaultRenderers = {
@@ -48,6 +49,7 @@ export const defaultRenderers = {
   blockquote: Blockquote,
   code: Code,
   br: Br,
+  section: Section,
 }
 export const defaultOptions = {
   baseUrl: null,

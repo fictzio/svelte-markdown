@@ -3,7 +3,7 @@
     import Action from "../components/Action.svelte"
     export let text:string
 
-    import { isMacro } from '../scripts/rpgmd'
+    import { isMacro } from '../components/macros';
     import { isComponent } from '../scripts/rpgmd'
 
     $:hasComponent = isComponent(text)
